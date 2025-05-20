@@ -1,4 +1,18 @@
-#mayankquizzzz
+import streamlit as st
+
+st.set_page_config(page_title="Simple Streamlit App", layout="centered")
+
+st.title("Welcome to My First Streamlit Website")
+st.write("Yeh ek simple web app hai jo do numbers ko add karta hai.")
+
+# Input boxes
+num1 = st.number_input("Pehla Number:", value=0)
+num2 = st.number_input("Doosra Number:", value=0)
+
+# Button to calculate
+if st.button("Add Karo"):
+    result = num1 + num2
+    st.success(f"Result: {result}")
 mcqs = [
     {"question": "‘बातचीत’ निबंध के लेखक कौन हैं?", "options": ["प्रेमचंद", "बालकृष्ण भट्ट", "सुमित्रानंदन पंत", "महादेवी वर्मा"], "correct": "b"},
     {"question": "वाक्शक्ति किसे ईश्वर का वरदान बताया गया है?", "options": ["भोजन को", "भाषण को", "वाक्शक्ति को", "धन को"], "correct": "c"},
